@@ -1,0 +1,52 @@
+@import "colors";
+
+nav{
+    height: 5rem;
+    padding: 2rem;
+    display :flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.299);
+    background-color: $bg;
+
+    >div{
+        display:flex;
+        align-items: center;
+
+        >svg{
+            color: $lightbrown;
+            font-size: 3rem;
+        }
+
+        >a{
+            margin: 0 2rem;
+            color: $darkbrown; 
+            transition: color 0.3s;
+
+            &:hover {
+                color: $hover_color;
+            }
+
+            >svg{
+                color: $lightbrown;
+                transition: inherit;
+                font-size: 1.5rem;
+
+                &:hover {
+                    color:$hover_color;
+                }
+    
+            }
+        }
+         
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+      padding: 1rem;
+      > div > a {
+        margin: 0 0.5rem;
+      }
+    }
+  }
